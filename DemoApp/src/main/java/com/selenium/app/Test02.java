@@ -74,10 +74,31 @@ public class Test02 {
 		Thread.sleep(3000);
 		
 		
-		
-		
+		//Get URL
+    	String u1=driver.getCurrentUrl();
+    	String u2="https://demo.opencart.com/index.php?route=account/register&language=en-gb";
+		//Get Title 
+    	String t1=driver.getTitle();
+    	String t2="Register Account";
+    	
+    	System.out.println(t1);
+    	System.out.println(u1);
+//    	Verify URL
+    	if(t1.equals(t2))
+    	{	System.out.println("Correct Url");
+    	}
+    	else
+    	{	System.out.println("Wrong Url");
+    	}
+//    	Verify Title
+    	if(u1.equals(u2))
+    	{	System.out.println("Correct Title");
+    	}
+    	else
+    	{	System.out.println("Wrong Title");
+    	}		
 		//To close the driver
-		driver.close();
+//		driver.close();
 		
 	
 	}
