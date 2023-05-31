@@ -1,6 +1,10 @@
 Chrome Driver :
 
-WebDriverManager.chromedriver().setup();
-		    	ChromeOptions co=new ChromeOptions();
-		    	co.addArguments("--remote-allow-origins=*");
-				WebDriver driver=new ChromeDriver(co);
+	WebDriverManager.chromedriver().setup();
+   	ChromeOptions co=new ChromeOptions();
+    	co.addArguments("--remote-allow-origins=*");
+	WebDriver driver=new ChromeDriver(co);
+	
+Edge Driver : 
+	
+	WebDriverManager.edgedriver().setup();
