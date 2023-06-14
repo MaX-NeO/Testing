@@ -1,0 +1,28 @@
+0. copy selenium server and browserdriver jars in c:
+
+1. hub command
+java -jar selenium-server-4.8.3.jar hub
+
+2. node command (replace the below ip with hub ip address)
+java -jar selenium-server-4.8.3.jar node --hub http://192.168.43.77:4444
+
+
+3. add the dependency in pom.xml and update pom(optional step)
+<dependency>
+    <groupId>com.google.guava</groupId>
+    <artifactId>guava</artifactId>
+    <version>31.0.1-jre</version>
+</dependency>
+
+4. add the following code in hub and run
+
+MutableCapabilities capabilities = new EdgeOptions();
+URL hubUrl = new URL("http://192.168.43.148:4444/wd/hub");
+WebDriver driver = new RemoteWebDriver(hubUrl, capabilities);
+driver.navigate().to("https://www.bing.com");
+System.out.println("Page title is: " + driver.getTitle());
+
+5. output would be displayed in node :)
+
+Reference URL:
+https://www.selenium.dev/documentation/grid/getting_started/#grid-roles
